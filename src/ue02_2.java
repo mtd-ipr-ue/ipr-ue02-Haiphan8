@@ -5,8 +5,13 @@ public class ue02_2 {
         Out.println("Geben Sie eine Jahreszahl und einen Monatswert zwischen 1 und 12 an:");
     
 int year = In.readInt();
-int month = In.readInt();
 
+
+if (year < 0 || year > 2200) {
+    System.out.println("Jahreszahl ist  nicht sinnvoll");
+}
+else {
+int month = In.readInt();
 switch (month)
     {case 1: case 3: case 5: case 7: case 8: case 10: case 12:
     System.out.println("31");
@@ -26,9 +31,12 @@ switch (month)
             System.out.println("29");
         }
         break;
+
+    default: 
+            System.out.println("Kein gültiger Monat angegeben");
 }
 
-
+}
     
 
 }
