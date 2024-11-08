@@ -3,13 +3,28 @@ import libraries.In;
 
 public class ue02_3 {
     public static void main(String[] args) {
-    
-        int x = In.readInt();
-        int y = In.readInt();
+        System.out.println("X-Koordinate:");
+        double x = In.readDouble();
+        System.out.println("Y-Koordinate:");
+        double y = In.readDouble();
 
         int r = 4;
-        if (Math.sqrt (x*x + y*y) > r && x <= r && y <= r) {
-            System.out.print("Punkt ist in der grünen Fläche");
+        
+        
+        if (x<0 || x>r || y<0 || y>r) {
+            System.out.println("Punkt liegt außerhalb des Quadrats");
+        }
+
+        else {
+            double d = Math.sqrt (x*x + y*y);
+            if (d>r) {
+
+                    System.out.println("Punkt liegt in der grünen Fläche");
+                }
+            else {
+                System.out.println("Punkt liegt nicht in der grünen Fläche");
+            }
+            }
     }
 }
-}
+
